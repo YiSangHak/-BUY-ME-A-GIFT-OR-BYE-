@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DDDDDD;
+
+    font-family: Asta Sans, monospace;
+    font-size: 16px;
+    line-height: 1.5;
+
+    padding: 10px 20px;
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+ul {
+    list-style: none;
+}
+
+.info {
+    font-size: 16px;
+    line-height: 1.5;
+    
+    display: flex;
+    align-items: top;
+    border-bottom: 1px solid #000000;
+    padding: 20px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: #DDDDDD;
+    padding: 10px 0;
+    border-bottom: 1px solid #000000;
+
+}
+
+a {
+    color: #000000;
+}
+
+.item-name {
+    flex: 2;
+}
+
+.price {
+    flex: 1;
+}
+
+.size {
+    flex: 1;
+}
+
+.link {
+    flex: 1;
+}
+
+.img {
+    width: 200px;
+    height: auto;
+}
+
+/* 1. 흔들리는 애니메이션 정의 */
+@keyframes shake-and-flash {
+    0% {
+        transform: translate(0, 0);
+        color: #000;
+    }
+
+    25% {
+        transform: translate(-2px, 2px);
+        color: #ff007f;
+    }
+
+    /* 핑크 */
+    50% {
+        transform: translate(2px, -2px);
+        color: #00ff00;
+    }
+
+    /* 연두 */
+    75% {
+        transform: translate(-2px, -2px);
+        color: #0000ff;
+    }
+
+    /* 파랑 */
+    100% {
+        transform: translate(0, 0);
+        color: #000;
+    }
+}
+
+/* 2. 타이틀에 마우스 올렸을 때(hover) 적용 */
+.main-title p:hover {
+    display: inline-block;
+    /* 애니메이션이 잘 먹히도록 설정 */
+    animation: shake-and-flash 0.2s infinite;
+    /* 0.2초마다 무한 반복 */
+    cursor: pointer;
+}
