@@ -32,22 +32,26 @@ body {
     /* 2. 텍스트들을 강제로 줄바꿈 (Block 요소로 변신) */
     .item-name, .price, .size, .link {
         display: block !important; /* 옆으로 서지 말고 혼자 한 줄 다 써라! */
-        width: 100% !important;    /* 너비도 꽉 채워라 */
+        width: 70% !important;    /* 너비도 꽉 채워라 */
         margin-bottom: 5px;        /* 아래 녀석이랑 간격 */
         text-align: left !important; /* 왼쪽 정렬 */
     }
 
     /* 3. 각자 자기 자리 찾아가기 */
-    .item-name { grid-area: name; font-weight: bold; margin-bottom: 10px; }
+    .item-name { grid-area: name; }
     .price     { grid-area: price; }
     .size      { grid-area: size; }
-    .link      { grid-area: link; margin-top: 10px; }
+    .link      { grid-area: link; }
 
     /* 4. 이미지 오른쪽 고정 */
     .img {
         grid-area: img;
         width: 100% !important;
-        height: auto !important;
+        height: auto !important;   
+    }
+
+    .img img {
+        border-radius: 10px;
     }
 }
 
